@@ -1,0 +1,67 @@
+* {
+	box-sizing:
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	background-color: #eda349;
+}
+
+.container {
+	max-width: 1200px;
+	width: 100%;
+	background: #e5e5e5;
+	margin: 0 auto;
+	border-radius: 10px;
+}
+
+#app {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 10vh 0;
+}
+
+#app .app {
+	padding: 10vh 0;
+}
+
+#app .contactForm {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#app .contactForm input {
+	margin-right: 20px;
+    height: 40px;
+    padding-left: 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+#app .contactForm button {
+    height: 40px;
+    width: 170px;
+    border: none;
+    border-radius: 5px;
+    background: #87cddb;
+    color: white;
+}
+
+#app .contactsList {
+	display: flex;
+    justify-content: center;
+}
+
+#app .contactsList .contactItem {
+    padding: 20px;
+    background: white;
+    font-family: 'Open Sans', sans-serif;
+    margin-right: 20px;
+    text-align: center;
+}
+
+#app .contactsList .contactItem:last-of-type {
+    margin-right: 0px;
+}
