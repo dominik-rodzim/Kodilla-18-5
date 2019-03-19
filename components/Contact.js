@@ -1,38 +1,26 @@
-var Contact = React.createClass({
+var ContactForm = React.createClass({
   propTypes: {
-    item: React.PropTypes.object.isRequired
+    contact: React.PropTypes.object.isRequired
   },
+
   render: function() {
-    return React.createElement(
-      "div",
-      { className: "contactItem" },
-      React.createElement("img", {
-        className: "contactImage",
-        src:
-          "http://icons.veryicon.com/256/System/Dynamic%20Yosemite/Contacts.png"
-      }),
-      React.createElement(
-        "div",
-        { className: "label-wrapper" },
-        React.createElement(
-          "p",
-          { className: "contactLabel" },
-          "Imię: " + this.props.item.firstName
-        ),
-        React.createElement(
-          "p",
-          { className: "contactLabel" },
-          "Nazwisko: " + this.props.item.lastName
-        ),
-        React.createElement(
-          "a",
-          {
-            className: "contactEmail",
-            href: "mailto:" + this.props.item.email
-          },
-          this.props.item.email
-        )
-      )
-    );
-  }
-});
+    return (
+      <form className={'contactForm'}>
+        <input
+          type={'text'}
+          placeholder={'Imię'}
+          value={this.props.contact.firstName}>
+        <input
+          type={'text'}
+          placeholder={'Nazwisko'}
+          value={this.props.contact.lastName}>
+        <input
+          type={'email'}
+          placeholder={'Email'}
+          value={this.props.contact.email}>  
+        <button type={'submit'}>
+          Dodaj kontakt
+        </button>
+    )
+  },
+})
